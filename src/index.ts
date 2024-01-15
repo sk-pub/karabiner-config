@@ -72,6 +72,10 @@ writeToProfile('SK', [
     map('↘︎', '⌃').to('↓', '⌘')
   ]),
 
+  rule('Alt-Tab → Cmd-Tab').manipulators([
+    map('⇥', '⌥').to('⇥', '⌘')
+  ]),
+
   rule('⌃ → ⌘ and Colemak → Qwerty').condition(ifInputSource({ input_source_id: 'Colemak' })).manipulators([
     withModifier('?any')([
       withModifier('⌃')([
