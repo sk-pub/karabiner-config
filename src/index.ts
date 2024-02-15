@@ -81,7 +81,8 @@ writeToProfile('SK', [
       withModifier('⌃')([
         withMapper(colemakToQuertyMap)((k, v) => map(k).to(v as ToKeyParam, '⌘'))
       ])
-    ])
+    ]),
+    map('c', '⌘').to('c', '⌃')
   ]),
 
   rule('⌃ → ⌘ if not Colemak').condition(ifInputSource({ input_source_id: 'Colemak' }).unless()).manipulators([
@@ -89,6 +90,7 @@ writeToProfile('SK', [
       withModifier('⌃')([
         withMapper(colemakToQuertyMap)((k, v) => map(k).to(k as ToKeyParam, '⌘'))
       ])
-    ])
+    ]),
+    map('c', '⌘').to('c', '⌃')
   ])
 ])
